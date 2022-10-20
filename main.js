@@ -1,4 +1,4 @@
-// Create a "close" button and append it to each list item
+// Створюемо кнопку закрити, та додаємо її до кожного елементу списку
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -9,7 +9,7 @@ for (i = 0; i < myNodelist.length; i++) {
     myNodelist[i].appendChild(span);
 }
 
-// Click on a close button to hide the current list item
+// Робимо так, щоб кнопка "закрити" прибирала  елемент зі списку
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -19,22 +19,22 @@ for (i = 0; i < close.length; i++) {
     }
 }
 
-// Add a "checked" symbol when clicking on a list item
+// Додаемо галочку до елемнту, коли натискаємо на нього
 var list = document.querySelector('ul');
-list.addEventListener('click', function (ev) {
-    if (ev.target.tagName === 'LI') {
-        ev.target.classList.toggle('checked');
+list.addEventListener('click', function (el) {
+    if (el.target.tagName === 'LI') {
+        el.target.classList.toggle('checked');
     }
 }, false);
 
-// Create a new list item when clicking on the "Add" button
+// Створення нового елементу списку, коли натискаємо на кнопку додати
 function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
     var t = document.createTextNode(inputValue);
     li.appendChild(t);
     if (inputValue === '') {
-        alert("You must write something!");
+        alert("Ви нічого не ввели!");
     } else {
         document.getElementById("myUL").appendChild(li);
     }
