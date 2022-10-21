@@ -31,8 +31,8 @@ list.addEventListener('click', function (el) {
 function newElement() {
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
-    var t = document.createTextNode(inputValue);
-    li.appendChild(t);
+    var task = document.createTextNode(inputValue);
+    li.appendChild(task);
     if (inputValue === '') {
         alert("Ви нічого не ввели!");
     } else {
@@ -40,16 +40,5 @@ function newElement() {
     }
     document.getElementById("myInput").value = "";
 
-    var span = document.createElement("SPAN");
-    var txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
 
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
 }
