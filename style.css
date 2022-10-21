@@ -10,7 +10,7 @@ ul {
     padding: 0;
 }
 
-/* Style the list items */
+/* Дизайн списку */
 ul li {
     cursor: pointer;
     position: relative;
@@ -19,31 +19,27 @@ ul li {
     font-size: 18px;
     transition: 0.2s;
 
-    /* make the list items unselectable */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
 }
 
-/* Set all odd list items to a different color (zebra-stripes) */
+/* робимо колір кожного елементу іншого кольору */
 ul li:nth-child(odd) {
     background: #f9f9f9;
 }
 
-/* Darker background-color on hover */
+/* міняємо колір, коли наводимось */
 ul li:hover {
     background: #ddd;
 }
 
-/* When clicked on, add a background color and strike out text */
+/* Коли ми натискаємо на задачу та міняємо колір та закреслюємо */
 ul li.checked {
     background: #888;
     color: #fff;
     text-decoration: line-through;
 }
 
-/* Add a "checked" mark when clicked on */
+/* Додаємо галочку до виконаного */
 ul li.checked::before {
     content: '';
     position: absolute;
@@ -57,7 +53,7 @@ ul li.checked::before {
     width: 7px;
 }
 
-/* Style the close button */
+/* Стиль конпки "закрити" */
 .close {
     position: absolute;
     right: 0;
@@ -85,7 +81,7 @@ ul li.checked::before {
     clear: both;
 }
 
-/* Style the input */
+/* Дизайн поля вводу */
 input {
     margin: 0;
     border: none;
@@ -96,7 +92,7 @@ input {
     font-size: 16px;
 }
 
-/* Style the "Add" button */
+/*Дизайн кнопки "додати"*/
 .addBtn {
     padding: 10px;
     width: 25%;
